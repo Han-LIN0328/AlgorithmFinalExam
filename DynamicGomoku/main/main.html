@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無限井字遊戲 (Infinite Tic-Tac-Toe)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>無限井字遊戲</h2>
+    <div id="status">
+        <div id="currentPlayer">目前回合：藍方 O</div>
+        <div id="turnInfo">回合數：<span id="turnCount">0</span></div>
+        <div id="timer">時間：00:00</div>
+        <div id="undoInfo">悔棋次數：藍方 <span id="undoCount1">0</span> / 紅方 <span id="undoCount2">0</span></div>
+    </div>
+    <div id="board"></div>
+    <div style="margin-top:15px; display:flex; gap:12px;">
+        <button onclick="window.triggerUndo()" id="undoBtn" disabled>悔旗</button>
+        <button onclick="window.triggerReset()" id="resetBtn">重新開始</button>
+    </div>
+
+    <div class="rules">
+        <p><strong>規則：</strong>每人場上最多保留 <strong>3</strong> 個印記。當你畫下第 4 個時，會先判定是否達成三連線；若未連成，你最早畫下的第 1 個印記就會消失。<br>
+        <i>* 閃爍且變小的印記，代表只要你再走一步，它就會消失。</i></p>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
